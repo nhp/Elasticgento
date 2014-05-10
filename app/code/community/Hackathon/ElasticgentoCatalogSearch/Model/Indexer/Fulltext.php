@@ -53,14 +53,20 @@ class Hackathon_ElasticgentoCatalogSearch_Model_Indexer_Fulltext extends Mage_Ca
      */
     public function matchEvent(Mage_Index_Model_Event $event)
     {
-        return false;
+        if (Mage::helper('elasticgento_catalogsearch')->isSearchActive()) {
+            return parent::matchEvent($event);
+        } else {
+            return false;
+        }
     }
 
     /**
      * Rebuild all index data
-     *
      */
     public function reindexAll()
     {
+        if (!Mage::helper('elasticgento_catalogsearch')->isSearchActive()) {
+            return parent::reindexAll();
+        }
     }
 }

@@ -36,19 +36,6 @@ class Hackathon_ElasticgentoCatalogSearch_Model_Catalogsearch_Resource_Fulltext
     extends Mage_CatalogSearch_Model_Resource_Fulltext
 {
 
-    /** config path to enable or disable catalog search through elasticsearch  */
-    const CONFIG_FLAG_ELASTICGENTO_CATALOGSEARCH_ENABLED = 'elasticgento/catalogsearch/active';
-
-    /**
-     * return the adapter for querying elasticsearch
-     *
-     * @return Hackathon_ElasticgentoCore_Model_Resource_Client
-     */
-    protected function getAdapter()
-    {
-        return Mage::getResourceSingleton('elasticgento/client');
-    }
-
     /**
      * override the method to prepare the result
      *
@@ -63,11 +50,13 @@ class Hackathon_ElasticgentoCatalogSearch_Model_Catalogsearch_Resource_Fulltext
         $query
     )
     {
-        if (!Mage::getStoreConfigFlag(static::CONFIG_FLAG_ELASTICGENTO_CATALOGSEARCH_ENABLED)) {
+        $helper = Mage::helper('elasticgento_catalogsearch');
+
+        if (!$helper->isSearchActive()) {
             return parent::prepareResult($object, $queryText, $query);
         }
 
-        $adapter = $this->getAdapter();
+        $adapter = $helper->getAdapter();
 
     }
 }
