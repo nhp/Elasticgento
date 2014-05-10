@@ -45,7 +45,9 @@ class Hackathon_ElasticgentoCore_Block_Adminhtml_System_Config_Fieldset_Version
      */
     public function render(Varien_Data_Form_Element_Abstract $element)
     {
-        return Mage::helper('elasticgento')->__('<div class="comment">Elasticgento version: <strong>%s</strong></div>',
-            Mage::getConfig()->getNode('modules/Hackathon_ElasticgentoCore/version'));
+        $VersionInfoText = '<div class="comment">' . $this->__('Elasticgento version:') . ' <strong>%s</strong></div>';
+        return Mage::helper('elasticgento')->__(
+            $VersionInfoText , Mage::getConfig()->getNode('modules/Hackathon_ElasticgentoCore/version')
+        );
     }
 }
