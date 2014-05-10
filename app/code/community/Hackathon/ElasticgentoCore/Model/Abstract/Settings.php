@@ -227,8 +227,8 @@ class Hackathon_ElasticgentoCore_Model_Abstract_Settings
     {
         if (false === isset($this->_settingsCache[$this->getStoreId()])) {
             $indexSettings = array();
-            $indexSettings['number_of_shards'] = (int)Mage::helper('elasticgento/config')->getNumberOfShards();
-            $indexSettings['number_of_replicas'] = (int)Mage::helper('elasticgento/config')->getNumberOfReplicas();
+            $indexSettings['number_of_shards'] = Mage::helper('elasticgento/config')->getNumberOfShards();
+            $indexSettings['number_of_replicas'] = Mage::helper('elasticgento/config')->getNumberOfReplicas();
             // define analyzer
             $indexSettings['analysis']['analyzer'] = array(
                 'whitespace' => array(
