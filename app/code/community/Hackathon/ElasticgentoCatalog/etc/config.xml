@@ -31,46 +31,29 @@
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      http://mage-hackathon.de/
  *
- * elasticgento module config file
- *
-*/
+ * elasticgento catalog module config file
+ */
 -->
 <config>
     <modules>
-        <Hackathon_ElasticgentoCore>
+        <Hackathon_ElasticgentoCatalog>
             <version>1.0.0</version>
-        </Hackathon_ElasticgentoCore>
+        </Hackathon_ElasticgentoCatalog>
     </modules>
     <global>
-        <!-- This is to initialize the new namespace,
-        we need Hackathon_PSR0Autoloader for this -->
-        <psr0_namespaces>
-            <Elastica />
-        </psr0_namespaces>
         <helpers>
-            <elasticgento>
-                <class>Hackathon_ElasticgentoCore_Helper</class>
-            </elasticgento>
+            <elasticgento_catalog>
+                <class>Hackathon_ElasticgentoCatalog_Helper</class>
+            </elasticgento_catalog>
         </helpers>
-        <blocks>
-            <elasticgento>
-                <class>Hackathon_ElasticgentoCore_Block</class>
-            </elasticgento>
-            <catalog>
-                <!-- Rewrite Catalog_Layer_View -->
-                <rewrite>
-                    <layer_view>Hackathon_ElasticgentoCore_Block_Catalog_Layer_View</layer_view>
-                </rewrite>
-            </catalog>
-        </blocks>
         <models>
-            <elasticgento>
-                <class>Hackathon_ElasticgentoCore_Model</class>
-                <resourceModel>elasticgento_resource</resourceModel>
-            </elasticgento>
-            <elasticgento_resource>
-                <class>Hackathon_ElasticgentoCore_Model_Resource</class>
-            </elasticgento_resource>
+            <elasticgento_catalog>
+                <class>Hackathon_ElasticgentoCatalog_Model</class>
+                <resourceModel>elasticgento_catalog_resource</resourceModel>
+            </elasticgento_catalog>
+            <elasticgento_catalog_resource>
+                <class>Hackathon_ElasticgentoCatalog_Model_Resource</class>
+            </elasticgento_catalog_resource>
         </models>
         <resources>
             <elasticgento_setup>
@@ -80,15 +63,13 @@
                 </setup>
             </elasticgento_setup>
         </resources>
-        <cache>
-            <types>
-                <namespace_module module="elasticgento" translate="label description">
-                    <label>Elasticgento</label>
-                    <description>Elasticgento mappings and settings</description>
-                    <tags>ELASTICGENTO</tags>
-                </namespace_module>
-            </types>
-        </cache>
+        <index>
+            <indexer>
+                <catalog_product_flat>
+                    <model>elasticgento_catalog/product_indexer_flat</model>
+                </catalog_product_flat>
+            </indexer>
+        </index>
     </global>
     <adminhtml>
         <events>

@@ -33,7 +33,7 @@
  * Elasticgento catalog product flat indexer replacement
  *
  */
-class Hackathon_ElasticgentoCore_Model_Indexer_Catalog_Product extends Mage_Catalog_Model_Product_Indexer_Flat
+class Hackathon_ElasticgentoCatalog_Model_Product_Indexer_Flat extends Mage_Catalog_Model_Product_Indexer_Flat
 {
 
     /**
@@ -53,7 +53,7 @@ class Hackathon_ElasticgentoCore_Model_Indexer_Catalog_Product extends Mage_Cata
      */
     public function getDescription()
     {
-        return Mage::helper('elasticgento')->__('Reorganize EAV product structure to Elasticgento index');
+        return Mage::helper('elasticgento_catalog')->__('Reorganize EAV product structure to Elasticgento index');
     }
 
     /**

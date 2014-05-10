@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Magento
  *
@@ -30,37 +31,10 @@
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      http://mage-hackathon.de/
  *
- * Elasticgento CatalogSearch fulltext indexer model replacement
+ * Elasticgento Catalog module helper
  *
  */
-class Hackathon_ElasticgentoCore_Model_Indexer_Catalog_Search extends Mage_CatalogSearch_Model_Indexer_Fulltext
+class Hackathon_ElasticgentoCatalog_Helper_Data extends Mage_Core_Helper_Abstract
 {
-    /**
-     * Retrieve Indexer description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return Mage::helper('elasticgento')->__('Rebuild Catalog product fulltext search index (indexing done within Elasticgento)');
-    }
 
-    /**
-     * make indexer not usable because indexing is done withing catalog_product_flat
-     *
-     * @param Mage_Index_Model_Event $event
-     * @return bool
-     */
-    public function matchEvent(Mage_Index_Model_Event $event)
-    {
-        return false;
-    }
-
-    /**
-     * Rebuild all index data
-     *
-     */
-    public function reindexAll()
-    {
-    }
 }
