@@ -110,4 +110,17 @@
             </catalog_entity_attribute_save_after>
         </events>
     </adminhtml>
+
+    <default>
+        <elasticgento>
+            <general>
+                <timeout>30</timeout>
+                <number_of_shards>2</number_of_shards>
+                <number_of_replicas>1</number_of_replicas>
+                <chunksize>1000</chunksize>
+                <facets_max_size>50</facets_max_size>
+                <enable_icu_folding>0</enable_icu_folding>
+            </general>
+        </elasticgento>
+    </default>
 </config>

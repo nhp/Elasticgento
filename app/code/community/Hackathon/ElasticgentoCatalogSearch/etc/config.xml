@@ -68,4 +68,14 @@
             </indexer>
         </index>
     </global>
+
+    <default>
+        <elasticgento>
+            <catalogsearch>
+                <active>1</active>
+                <suggestions>1</suggestions>
+                <recommendations>1</recommendations>
+            </catalogsearch>
+        </elasticgento>
+    </default>
 </config>
