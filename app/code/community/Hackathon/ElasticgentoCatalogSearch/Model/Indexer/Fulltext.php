@@ -33,7 +33,7 @@
  * Elasticgento CatalogSearch fulltext indexer model replacement
  *
  */
-class Hackathon_ElasticgentoCore_Model_Indexer_Catalog_Search extends Mage_CatalogSearch_Model_Indexer_Fulltext
+class Hackathon_ElasticgentoCatalogSearch_Model_Indexer_Fulltext extends Mage_CatalogSearch_Model_Indexer_Fulltext
 {
     /**
      * Retrieve Indexer description
@@ -42,7 +42,7 @@ class Hackathon_ElasticgentoCore_Model_Indexer_Catalog_Search extends Mage_Catal
      */
     public function getDescription()
     {
-        return Mage::helper('elasticgento')->__('Rebuild Catalog product fulltext search index (indexing done within Elasticgento)');
+        return Mage::helper('elasticgento_catalogsearch')->__('Rebuild Catalog product fulltext search index (indexing done within Elasticgento)');
     }
 
     /**

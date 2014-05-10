@@ -58,7 +58,7 @@
         <index>
             <indexer>
                 <catalogsearch_fulltext>
-                    <model>elasticgento_catalogsearch/indexer_catalog_search</model>
+                    <model>elasticgento_catalogsearch/indexer_fulltext</model>
                 </catalogsearch_fulltext>
             </indexer>
         </index>

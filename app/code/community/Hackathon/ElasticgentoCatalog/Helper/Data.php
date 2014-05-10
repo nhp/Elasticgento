@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Magento
  *
@@ -30,39 +31,10 @@
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      http://mage-hackathon.de/
  *
- * Elasticgento catalog product flat indexer replacement
+ * Elasticgento Catalog module helper
  *
  */
-class Hackathon_ElasticgentoCatalog_Model_Product_Indexer_Flat extends Mage_Catalog_Model_Product_Indexer_Flat
+class Hackathon_ElasticgentoCatalog_Helper_Data extends Mage_Core_Helper_Abstract
 {
 
-    /**
-     * Whether the indexer should be displayed on process/list page
-     *
-     * @return bool
-     */
-    public function isVisible()
-    {
-        return true;
-    }
-
-    /**
-     * Retrieve Indexer description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return Mage::helper('elasticgento_catalog')->__('Reorganize EAV product structure to Elasticgento index');
-    }
-
-    /**
-     * Retrieve Catalog Product Flat Indexer model
-     *
-     * @return Hackathon_ElasticgentoCore_Model_Catalog_Product_Elasticgento_Indexer
-     */
-    protected function _getIndexer()
-    {
-        return Mage::getSingleton('elasticgento/catalog_product_elasticgento_indexer');
-    }
 }
