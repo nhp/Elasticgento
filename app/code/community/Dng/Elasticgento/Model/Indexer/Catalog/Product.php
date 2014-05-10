@@ -4,11 +4,11 @@
  * Elasticgento catalog product flat indexer replacement
  *
  * @category  Dng
- * @package   Dng_Elasticgento
+ * @package   Hackathon_Elasticgento
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
  * @version   1.0.0
  */
-class Dng_Elasticgento_Model_Indexer_Catalog_Product extends Mage_Catalog_Model_Product_Indexer_Flat
+class Hackathon_Elasticgento_Model_Indexer_Catalog_Product extends Mage_Catalog_Model_Product_Indexer_Flat
 {
 
     /**
@@ -34,7 +34,7 @@ class Dng_Elasticgento_Model_Indexer_Catalog_Product extends Mage_Catalog_Model_
     /**
      * Retrieve Catalog Product Flat Indexer model
      *
-     * @return Dng_Elasticgento_Model_Catalog_Product_Elasticgento_Indexer
+     * @return Hackathon_Elasticgento_Model_Catalog_Product_Elasticgento_Indexer
      */
     protected function _getIndexer()
     {

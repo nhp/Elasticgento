@@ -4,14 +4,14 @@
  * elasticgento module declarations
  *
  * @category  Dng
- * @package   Dng_Elasticgento
+ * @package   Hackathon_Elasticgento
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
  * @version   1.0.0
  */
 -->
 <config>
     <modules>
-        <Dng_Elasticgento>
+        <Hackathon_Elasticgento>
             <active>true</active>
             <codePool>community</codePool>
             <depends>
@@ -20,6 +20,6 @@
                 <Mage_Adminhtml/>
                 <Mage_Catalog/>
             </depends>
-        </Dng_Elasticgento>
+        </Hackathon_Elasticgento>
     </modules>
 </config>

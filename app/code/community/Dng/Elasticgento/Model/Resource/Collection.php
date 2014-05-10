@@ -4,17 +4,17 @@
  * Elasticgento base collection
  *
  * @category  Dng
- * @package   Dng_Elasticgento
+ * @package   Hackathon_Elasticgento
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
  * @version   1.0.0
  */
-abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model_Entity_Collection_Abstract
+abstract class Hackathon_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model_Entity_Collection_Abstract
 {
     const SORT_ORDER_ASC = 'ASC';
     const SORT_ORDER_DESC = 'DESC';
 
     /**
-     * @var Dng_Elasticgento_Model_Resource_Client
+     * @var Hackathon_Elasticgento_Model_Resource_Client
      */
     protected $_client = null;
 
@@ -78,7 +78,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
      * resource collection initalization
      *
      * @param string $model
-     * @return Dng_Elasticgento_Model_Resource_Collection_Abstract
+     * @return Hackathon_Elasticgento_Model_Resource_Collection_Abstract
      */
     protected function _init($model, $entityModel = null)
     {
@@ -128,7 +128,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
      * Set store scope
      *
      * @param int|string|Mage_Core_Model_Store $store
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     public function setStore($store)
     {
@@ -140,7 +140,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
      * Set store scope
      *
      * @param int|string|Mage_Core_Model_Store $storeId
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     public function setStoreId($storeId)
     {
@@ -152,7 +152,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
     }
 
     /**
-     * @return Dng_Elasticgento_Model_Resource_Client
+     * @return Hackathon_Elasticgento_Model_Resource_Client
      */
     protected function getAdapter()
     {
@@ -167,7 +167,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
     /**
      * Init select
      *
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     protected function _initSelect()
     {
@@ -191,7 +191,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
     /**
      * Before load action
      *
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     protected function _beforeLoad()
     {
@@ -203,7 +203,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
     /**
      * Hook for operations before rendering filters
      *
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     protected function _renderFiltersBefore()
     {
@@ -213,7 +213,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
     /**
      * render collection filters
      *
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     protected function _renderFilters()
     {
@@ -227,7 +227,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
     /**
      * Hook for operations after rendering filters
      *
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     protected function _renderFiltersAfter()
     {
@@ -237,7 +237,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
     /**
      * Hook for operations before rendering query object
      *
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     protected function _renderQueryBefore()
     {
@@ -248,7 +248,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
     /**
      * render collection facets
      *
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     protected function _renderQuery()
     {
@@ -265,7 +265,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
     /**
      * Hook for operations after query object
      *
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     protected function _renderQueryAfter()
     {
@@ -275,7 +275,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
     /**
      * Hook for operations before rendering facets
      *
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     protected function _renderFacetsBefore()
     {
@@ -285,7 +285,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
     /**
      * render collection facets
      *
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     protected function _renderFacets()
     {
@@ -298,7 +298,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
     /**
      * Hook for operations after rendering facets
      *
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     protected function _renderFacetsAfter()
     {
@@ -308,7 +308,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
     /**
      * render collection sort
      *
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     protected function _renderOrders()
     {
@@ -319,7 +319,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
      * add facet to collection
      *
      * @param AbstractFacet $facet
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     public function addFacet($facet)
     {
@@ -331,7 +331,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
      * add facet to collection
      *
      * @param AbstractFacet $facet
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     public function removeFacet($name)
     {
@@ -369,7 +369,7 @@ abstract class Dng_Elasticgento_Model_Resource_Collection extends Mage_Eav_Model
     /**
      * Load collection data into object items
      *
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     public function load($printQuery = false, $logQuery = false)
     {

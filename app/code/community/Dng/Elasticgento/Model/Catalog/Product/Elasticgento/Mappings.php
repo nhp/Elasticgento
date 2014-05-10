@@ -4,11 +4,11 @@
  * Catalog Product Elasticgento Index Mappings
  *
  * @category  Dng
- * @package   Dng_Elasticgento
+ * @package   Hackathon_Elasticgento
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
  * @version   1.0.0
  */
-class Dng_Elasticgento_Model_Catalog_Product_Elasticgento_Mappings extends Dng_Elasticgento_Model_Abstract_Mappings
+class Hackathon_Elasticgento_Model_Catalog_Product_Elasticgento_Mappings extends Hackathon_Elasticgento_Model_Abstract_Mappings
 {
     /**
      * index templates for dynamic fields

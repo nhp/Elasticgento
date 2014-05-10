@@ -4,11 +4,11 @@
  * Catalog Product Elasticgento Indexer Model
  *
  * @category  Dng
- * @package   Dng_Elasticgento
+ * @package   Hackathon_Elasticgento
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
  * @version   1.0.0
  */
-class Dng_Elasticgento_Model_Catalog_Product_Elasticgento_Indexer extends Mage_Core_Model_Abstract
+class Hackathon_Elasticgento_Model_Catalog_Product_Elasticgento_Indexer extends Mage_Core_Model_Abstract
 {
     /**
      * Catalog product flat entity for indexers
@@ -246,7 +246,7 @@ class Dng_Elasticgento_Model_Catalog_Product_Elasticgento_Indexer extends Mage_C
     /**
      * Rebuild Elasticgento Catalog Product Data for all stores
      *
-     * @return Dng_Elasticgento_Model_Catalog_Product_Elasticgento_Indexer
+     * @return Hackathon_Elasticgento_Model_Catalog_Product_Elasticgento_Indexer
      */
     public function reindexAll()
     {

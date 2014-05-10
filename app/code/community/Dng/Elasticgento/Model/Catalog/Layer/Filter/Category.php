@@ -4,17 +4,17 @@
  * Catalog Category layer Filter
  *
  * @category  Dng
- * @package   Dng_Elasticgento
+ * @package   Hackathon_Elasticgento
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
  * @version   1.0.0
  */
-class Dng_Elasticgento_Model_Catalog_Layer_Filter_Category extends Mage_Catalog_Model_Layer_Filter_Category
+class Hackathon_Elasticgento_Model_Catalog_Layer_Filter_Category extends Mage_Catalog_Model_Layer_Filter_Category
 {
     /**
      * add category facet filter to product collection.
      *
      * @param Mage_Catalog_Model_Category $category
-     * @return Dng_Elasticgento_Model_Catalog_Layer_Filter_Category
+     * @return Hackathon_Elasticgento_Model_Catalog_Layer_Filter_Category
      */
     public function addCategoryFilter($category)
     {
@@ -25,7 +25,7 @@ class Dng_Elasticgento_Model_Catalog_Layer_Filter_Category extends Mage_Catalog_
     /**
      * Adds facet condition to product collection.
      *
-     * @return Dng_Elasticgento_Model_Catalog_Layer_Filter_Category
+     * @return Hackathon_Elasticgento_Model_Catalog_Layer_Filter_Category
      * @todo add filter for current category childen
      */
     public function addFacetToCollection()
@@ -48,7 +48,7 @@ class Dng_Elasticgento_Model_Catalog_Layer_Filter_Category extends Mage_Catalog_
      *
      * @param Zend_Controller_Request_Abstract $request
      * @param Mage_Core_Block_Abstract $filterBlock
-     * @return Dng_Elasticgento_Model_Catalog_Layer_Filter_Category
+     * @return Hackathon_Elasticgento_Model_Catalog_Layer_Filter_Category
      */
     public function apply(Zend_Controller_Request_Abstract $request, $filterBlock)
     {
@@ -98,7 +98,7 @@ class Dng_Elasticgento_Model_Catalog_Layer_Filter_Category extends Mage_Catalog_
         if ($data === null) {
             $categories = $this->getCategory()->getChildrenCategories();
 
-            /** @var $productCollection Dng_Elasticgento_Model_Resource_Catalog_Product_Collection */
+            /** @var $productCollection Hackathon_Elasticgento_Model_Resource_Catalog_Product_Collection */
             $productCollection = $layer->getProductCollection();
             $facets = $productCollection->getFacetData('categories');
             $data = array();

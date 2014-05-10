@@ -4,11 +4,11 @@
  * Elasticgento Adminhtml observer
  *
  * @category  Dng
- * @package   Dng_Elasticgento
+ * @package   Hackathon_Elasticgento
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
  * @version   1.0.0
  */
-class Dng_Elasticgento_Model_Adminhtml_Observer
+class Hackathon_Elasticgento_Model_Adminhtml_Observer
 {
     /**
      * Adds additional fields to attribute edit form.

@@ -4,11 +4,11 @@
  * Elasticgento catalog product collection
  *
  * @category  Dng
- * @package   Dng_Elasticgento
+ * @package   Hackathon_Elasticgento
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
  * @version   1.0.0
  */
-class Dng_Elasticgento_Model_Resource_Catalog_Product_Collection extends Dng_Elasticgento_Model_Resource_Collection
+class Hackathon_Elasticgento_Model_Resource_Catalog_Product_Collection extends Hackathon_Elasticgento_Model_Resource_Collection
 {
     /**
      * Product limitation filters
@@ -71,7 +71,7 @@ class Dng_Elasticgento_Model_Resource_Catalog_Product_Collection extends Dng_Ela
     }
 
     /**
-     * @return Dng_Elasticgento_Model_Resource_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Collection
      */
     protected function _renderFiltersBefore()
     {
@@ -170,7 +170,7 @@ class Dng_Elasticgento_Model_Resource_Catalog_Product_Collection extends Dng_Ela
     /**
      * after load callback
      *
-     * @return Dng_Elasticgento_Model_Resource_Collection_Abstract
+     * @return Hackathon_Elasticgento_Model_Resource_Collection_Abstract
      */
     protected function _afterLoad()
     {
@@ -194,7 +194,7 @@ class Dng_Elasticgento_Model_Resource_Catalog_Product_Collection extends Dng_Ela
     /**
      * Add minimal price data to result
      *
-     * @return Dng_Elasticgento_Model_Resource_Catalog_Product_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Catalog_Product_Collection
      */
     public function addMinimalPrice()
     {
@@ -204,7 +204,7 @@ class Dng_Elasticgento_Model_Resource_Catalog_Product_Collection extends Dng_Ela
     /**
      * Add final price to the product
      *
-     * @return Dng_Elasticgento_Model_Resource_Catalog_Product_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Catalog_Product_Collection
      */
     public function addFinalPrice()
     {
@@ -217,7 +217,7 @@ class Dng_Elasticgento_Model_Resource_Catalog_Product_Collection extends Dng_Ela
      *
      * @param int $customerGroupId
      * @param int $websiteId
-     * @return Dng_Elasticgento_Model_Resource_Catalog_Product_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Catalog_Product_Collection
      */
     public function addPriceData($customerGroupId = null)
     {
@@ -235,7 +235,7 @@ class Dng_Elasticgento_Model_Resource_Catalog_Product_Collection extends Dng_Ela
     /**
      * Add requere tax percent flag for product collection
      *
-     * @return Dng_Elasticgento_Model_Resource_Catalog_Product_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Catalog_Product_Collection
      */
     public function addTaxPercents()
     {
@@ -249,7 +249,7 @@ class Dng_Elasticgento_Model_Resource_Catalog_Product_Collection extends Dng_Ela
      * If collection loadded - run processing else set flag
      *
      * @param int|string $categoryId
-     * @return Dng_Elasticgento_Model_Resource_Catalog_Product_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Catalog_Product_Collection
      */
     public function addUrlRewrite($categoryId = '')
     {
@@ -269,7 +269,7 @@ class Dng_Elasticgento_Model_Resource_Catalog_Product_Collection extends Dng_Ela
      * Set product visibility filter for enabled products
      *
      * @param array $visibility
-     * @return Dng_Elasticgento_Model_Resource_Catalog_Product_Collection
+     * @return Hackathon_Elasticgento_Model_Resource_Catalog_Product_Collection
      */
     public function setVisibility($visibility)
     {

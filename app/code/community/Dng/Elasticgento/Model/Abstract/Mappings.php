@@ -4,11 +4,11 @@
  * Elasticgento Abstract Index Mappings
  *
  * @category  Dng
- * @package   Dng_Elasticgento
+ * @package   Hackathon_Elasticgento
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
  * @version   1.0.0
  */
-abstract class Dng_Elasticgento_Model_Abstract_Mappings
+abstract class Hackathon_Elasticgento_Model_Abstract_Mappings
 {
     /**
      * Current scope (store Id)

@@ -4,11 +4,11 @@
  * Catalog Product Elasticgento Indexer Resource Model
  *
  * @category  Dng
- * @package   Dng_Elasticgento
+ * @package   Hackathon_Elasticgento
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
  * @version   1.0.0
  */
-class Dng_Elasticgento_Model_Resource_Catalog_Product_Indexer_Elasticgento extends Mage_Index_Model_Resource_Abstract
+class Hackathon_Elasticgento_Model_Resource_Catalog_Product_Indexer_Elasticgento extends Mage_Index_Model_Resource_Abstract
 {
 
     /**
@@ -21,7 +21,7 @@ class Dng_Elasticgento_Model_Resource_Catalog_Product_Indexer_Elasticgento exten
     /**
      * Elasticgento client instance
      *
-     * @var Dng_Elasticgento_Model_Resource_Client
+     * @var Hackathon_Elasticgento_Model_Resource_Client
      */
     protected $_client = null;
 
@@ -89,7 +89,7 @@ class Dng_Elasticgento_Model_Resource_Catalog_Product_Indexer_Elasticgento exten
     /**
      * get elasticsearch client instance
      *
-     * @return Dng_Elasticgento_Model_Resource_Client
+     * @return Hackathon_Elasticgento_Model_Resource_Client
      */
     protected function _getClient()
     {
@@ -103,7 +103,7 @@ class Dng_Elasticgento_Model_Resource_Catalog_Product_Indexer_Elasticgento exten
      * get instance of mapping model by store scope
      *
      * @param integer $storeId
-     * @return Dng_Elasticgento_Model_Catalog_Product_Elasticgento_Mappings
+     * @return Hackathon_Elasticgento_Model_Catalog_Product_Elasticgento_Mappings
      */
     protected function _getMappingModel($storeId)
     {
@@ -131,7 +131,7 @@ class Dng_Elasticgento_Model_Resource_Catalog_Product_Indexer_Elasticgento exten
      * prepare elasticsearch index for store
      *
      * @param integer $storeId
-     * @return Dng_Elasticgento_Model_Resource_Catalog_Product_Indexer_Elasticgento
+     * @return Hackathon_Elasticgento_Model_Resource_Catalog_Product_Indexer_Elasticgento
      * @todo implement alias handling for non blocking reindex
      */
     protected function _prepareIndex($storeId)
@@ -555,7 +555,7 @@ class Dng_Elasticgento_Model_Resource_Catalog_Product_Indexer_Elasticgento exten
      * rebuild elasticgento catalog product data
      *
      * @param Mage_Core_Model_Store|int $store
-     * @return Dng_Elasticgento_Model_Resource_Catalog_Product_Indexer_Elasticgento
+     * @return Hackathon_Elasticgento_Model_Resource_Catalog_Product_Indexer_Elasticgento
      */
     public function rebuild($store = null)
     {

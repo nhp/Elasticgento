@@ -4,12 +4,12 @@
  * Elasticgento Client
  *
  * @category  Dng
- * @package   Dng_Elasticgento
+ * @package   Hackathon_Elasticgento
  * @see \Elastica\Client
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
  * @version   1.0.0
  */
-class Dng_Elasticgento_Model_Resource_Client extends \Elastica\Client
+class Hackathon_Elasticgento_Model_Resource_Client extends \Elastica\Client
 {
     /**
      * Search query params with their default values

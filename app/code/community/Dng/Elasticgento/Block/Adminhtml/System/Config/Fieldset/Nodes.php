@@ -4,11 +4,11 @@
  * class to display info about version in admin
  *
  * @category  Dng
- * @package   Dng_Elasticgento
+ * @package   Hackathon_Elasticgento
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
  * @version   1.0.0
  */
-class Dng_Elasticgento_Block_Adminhtml_System_Config_Fieldset_Nodes
+class Hackathon_Elasticgento_Block_Adminhtml_System_Config_Fieldset_Nodes
     extends Mage_Adminhtml_Block_System_Config_Form_Field_Array_Abstract
 {
     /**

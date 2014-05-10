@@ -4,11 +4,11 @@
  * Catalog layered navigation view block
  *
  * @category  Dng
- * @package   Dng_Elasticgento
+ * @package   Hackathon_Elasticgento
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
  * @version   1.0.0
  */
-class Dng_Elasticgento_Block_Catalog_Layer_View extends Mage_Catalog_Block_Layer_View
+class Hackathon_Elasticgento_Block_Catalog_Layer_View extends Mage_Catalog_Block_Layer_View
 {
     /**
      * Boolean block name.
@@ -47,7 +47,7 @@ class Dng_Elasticgento_Block_Catalog_Layer_View extends Mage_Catalog_Block_Layer
     /**
      * Prepare child blocks
      *
-     * @return Dng_Elasticgento_Block_Catalog_Layer_View
+     * @return Hackathon_Elasticgento_Block_Catalog_Layer_View
      */
     protected function _prepareLayout()
     {
@@ -86,7 +86,7 @@ class Dng_Elasticgento_Block_Catalog_Layer_View extends Mage_Catalog_Block_Layer
     /**
      * Get layer object
      *
-     * @return Dng_Elasticgento_Model_Catalog_Layer
+     * @return Hackathon_Elasticgento_Model_Catalog_Layer
      */
     public function getLayer()
     {

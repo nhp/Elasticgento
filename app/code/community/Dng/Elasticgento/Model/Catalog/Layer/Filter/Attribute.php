@@ -4,16 +4,16 @@
  * Catalog Category Product attribute Filter
  *
  * @category  Dng
- * @package   Dng_Elasticgento
+ * @package   Hackathon_Elasticgento
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
  * @version   1.0.0
  */
-class Dng_Elasticgento_Model_Catalog_Layer_Filter_Attribute extends Mage_Catalog_Model_Layer_Filter_Attribute
+class Hackathon_Elasticgento_Model_Catalog_Layer_Filter_Attribute extends Mage_Catalog_Model_Layer_Filter_Attribute
 {
     /**
      * adds current attribute facet condition to product collection
      *
-     * @return Dng_Elasticgento_Model_Catalog_Layer_Filter_Attribute
+     * @return Hackathon_Elasticgento_Model_Catalog_Layer_Filter_Attribute
      */
     public function addFacetToCollection()
     {
@@ -29,7 +29,7 @@ class Dng_Elasticgento_Model_Catalog_Layer_Filter_Attribute extends Mage_Catalog
      *
      * @param Zend_Controller_Request_Abstract $request
      * @param Mage_Core_Block_Abstract $filterBlock
-     * @return Dng_Elasticgento_Model_Catalog_Layer_Filter_Attribute
+     * @return Hackathon_Elasticgento_Model_Catalog_Layer_Filter_Attribute
      */
     public function apply(Zend_Controller_Request_Abstract $request, $filterBlock)
     {
@@ -53,7 +53,7 @@ class Dng_Elasticgento_Model_Catalog_Layer_Filter_Attribute extends Mage_Catalog
      *
      * @param $filter
      * @param $value
-     * @return Dng_Elasticgento_Model_Catalog_Layer_Filter_Attribute
+     * @return Hackathon_Elasticgento_Model_Catalog_Layer_Filter_Attribute
      */
     public function applyFilterToCollection($filter, $value)
     {

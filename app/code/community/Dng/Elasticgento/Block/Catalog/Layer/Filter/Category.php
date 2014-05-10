@@ -4,11 +4,11 @@
  * Category layer filter block for categories
  *
  * @category  Dng
- * @package   Dng_Elasticgento
+ * @package   Hackathon_Elasticgento
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
  * @version   1.0.0
  */
-class Dng_Elasticgento_Block_Catalog_Layer_Filter_Category extends Mage_Catalog_Block_Layer_Filter_Abstract
+class Hackathon_Elasticgento_Block_Catalog_Layer_Filter_Category extends Mage_Catalog_Block_Layer_Filter_Abstract
 {
     /**
      * overide filter model name.
@@ -22,7 +22,7 @@ class Dng_Elasticgento_Block_Catalog_Layer_Filter_Category extends Mage_Catalog_
     /**
      * add category facet condition to filter
      *
-     * @return Dng_Elasticgento_Block_Catalog_Layer_Filter_Category
+     * @return Hackathon_Elasticgento_Block_Catalog_Layer_Filter_Category
      */
     public function addFacetCondition()
     {

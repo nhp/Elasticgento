@@ -4,11 +4,11 @@
  * Elasticgento Abstract Index Settings
  *
  * @category  Dng
- * @package   Dng_Elasticgento
+ * @package   Hackathon_Elasticgento
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
  * @version   1.0.0
  */
-class Dng_Elasticgento_Model_Abstract_Settings
+class Hackathon_Elasticgento_Model_Abstract_Settings
 {
     /**
      * Snowball languages supported in elasticsearch

@@ -4,11 +4,11 @@
  * Elasticgento CatalogSearch fulltext indexer model replacement
  *
  * @category  Dng
- * @package   Dng_Elasticgento
+ * @package   Hackathon_Elasticgento
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
  * @version   1.0.0
  */
-class Dng_Elasticgento_Model_Indexer_Catalog_Search extends Mage_CatalogSearch_Model_Indexer_Fulltext
+class Hackathon_Elasticgento_Model_Indexer_Catalog_Search extends Mage_CatalogSearch_Model_Indexer_Fulltext
 {
     /**
      * Retrieve Indexer description
