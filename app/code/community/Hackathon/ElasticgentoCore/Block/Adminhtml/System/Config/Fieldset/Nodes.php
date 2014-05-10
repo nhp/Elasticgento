@@ -48,10 +48,10 @@ class Hackathon_ElasticgentoCore_Block_Adminhtml_System_Config_Fieldset_Nodes
 
         $this->_typeRenderer = null;
 
-        $this->addColumn('Host', array(
+        $this->addColumn('host', array(
             'label' => Mage::helper('elasticgento')->__('Host')
         ));
-        $this->addColumn('Port', array(
+        $this->addColumn('port', array(
             'label' => Mage::helper('elasticgento')->__('Port'),
             'style' => 'width:50px',
         ));
