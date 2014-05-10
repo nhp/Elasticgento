@@ -231,18 +231,40 @@ class Hackathon_ElasticgentoCore_Model_Resource_Catalog_Product_Indexer_Elasticg
     private function _getDocuments($storeId, $parameters = array())
     {
         list($type) = array_keys($parameters);
+        /** @var Varien_Db_Adapter_Pdo_Mysql $adapter */
         $adapter = $this->_getReadAdapter();
         $websiteId = (int)Mage::app()->getStore($storeId)->getWebsite()->getId();
-        $fieldList = array('entity_id', 'type_id', 'attribute_set_id');
+        $status = $this->getAttribute($storeId, 'status');
+        $fieldList = array('entity_id', 'type_id', 'attribute_set_id', 'status' => $adapter->getCheckSql('t2.value_id > 0', 't2.value', 't1.value'));
         $colsList = array('entity_id', 'type_id', 'attribute_set_id');
-
+        $bind = array(
+            'website_id' => (int)$websiteId,
+            'store_id' => (int)$storeId,
+            'entity_type_id' => (int)$this->getEntityTypeId(),
+            'status_attribute_id' => (int)$status->getId()
+        );
         $fields = $this->getMappings($storeId);
+        $fieldExpr = $adapter->getCheckSql('t2.value_id > 0', 't2.value', 't1.value');
         $select = $this->_getReadAdapter()->select()
             ->from(array('e' => $this->getTable('catalog/product')), $colsList)
             ->join(
                 array('wp' => $this->getTable('catalog/product_website')),
                 'e.entity_id = wp.product_id AND wp.website_id = :website_id',
-                array());
+                array())
+            ->joinLeft(
+                array('t1' => $status->getBackend()->getTable()),
+                'e.entity_id = t1.entity_id',
+                array())
+            ->joinLeft(
+                array('t2' => $status->getBackend()->getTable()),
+                't2.entity_id = t1.entity_id'
+                . ' AND t1.entity_type_id = t2.entity_type_id'
+                . ' AND t1.attribute_id = t2.attribute_id'
+                . ' AND t2.store_id = :store_id',
+                array())
+            ->where('t1.entity_type_id = :entity_type_id')
+            ->where('t1.attribute_id = :status_attribute_id')
+            ->where('t1.store_id = ?', Mage_Core_Model_App::ADMIN_STORE_ID);
         foreach ($this->getAttributes($storeId) as $attributeCode => $attribute) {
             /** @var $attribute Mage_Eav_Model_Entity_Attribute */
             if ($attribute->getBackend()->getType() == 'static') {
@@ -253,12 +275,14 @@ class Hackathon_ElasticgentoCore_Model_Resource_Catalog_Product_Indexer_Elasticg
                 $select->columns($attributeCode, 'e');
             }
         }
+        //add status
+        $select->columns(array('status' => $adapter->getCheckSql('t2.value_id > 0', 't2.value', 't1.value')));
         if ($type !== 'range') {
             $select->where('e.entity_id BETWEEN ? AND ?', array_map('intval', $parameters['from']), array_map('intval', $parameters['to']));
         }
         $documents = array();
         //loop over result and create documents
-        foreach ($adapter->query($select, array('website_id' => (int)$websiteId))->fetchAll() as $entity) {
+        foreach ($adapter->query($select, $bind)->fetchAll() as $entity) {
             $document = $this->_getClient()->getDocument($this->getEntityType() . '_' . $entity['entity_id'], $entity);
             //enable autocreation on update
             $document->setDocAsUpsert(true);

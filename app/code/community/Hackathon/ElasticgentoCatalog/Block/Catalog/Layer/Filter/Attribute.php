@@ -33,7 +33,7 @@
  * Category layer filter block for different attributes
  *
  */
-class Hackathon_ElasticgentoCore_Block_Catalog_Layer_Filter_Attribute extends Mage_Catalog_Block_Layer_Filter_Abstract
+class Hackathon_ElasticgentoCatalog_Block_Catalog_Layer_Filter_Attribute extends Mage_Catalog_Block_Layer_Filter_Abstract
 {
     /**
      * overide filter model name.

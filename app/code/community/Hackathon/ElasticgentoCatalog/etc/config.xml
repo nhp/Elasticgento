@@ -46,6 +46,17 @@
                 <class>Hackathon_ElasticgentoCatalog_Helper</class>
             </elasticgento_catalog>
         </helpers>
+        <blocks>
+            <elasticgento_catalog>
+                <class>Hackathon_ElasticgentoCatalog_Block</class>
+            </elasticgento_catalog>
+            <catalog>
+                <!-- Rewrite Catalog_Layer_View -->
+                <rewrite>
+                    <layer_view>Hackathon_ElasticgentoCatalog_Block_Catalog_Layer_View</layer_view>
+                </rewrite>
+            </catalog>
+        </blocks>
         <models>
             <elasticgento_catalog>
                 <class>Hackathon_ElasticgentoCatalog_Model</class>
