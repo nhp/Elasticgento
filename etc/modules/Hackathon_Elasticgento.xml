@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * elasticgento module declarations
+ *
+ * @category  Hackathon
+ * @package   Hackathon_Elasticgento
+ * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
+ * @version   1.0.0
+ */
+-->
+<config>
+    <modules>
+        <Hackathon_ElasticgentoCore>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Core/>
+                <Mage_Admin/>
+                <Mage_Adminhtml/>
+                <Mage_Catalog/>
+            </depends>
+        </Hackathon_ElasticgentoCore>
+        <Hackathon_ElasticgentoCatalog>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Hackathon_ElasticgentoCore/>
+            </depends>
+        </Hackathon_ElasticgentoCatalog>
+        <Hackathon_ElasticgentoCatalogSearch>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Hackathon_ElasticgentoCore/>
+            </depends>
+        </Hackathon_ElasticgentoCatalogSearch>
+
+    </modules>
+</config>
