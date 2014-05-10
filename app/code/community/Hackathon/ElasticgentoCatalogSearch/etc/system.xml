@@ -76,6 +76,15 @@
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
                         </recommendations>
+                        <category_weight translate="label comment">
+                            <label>Category Weight</label>
+                            <frontend_type>text</frontend_type>
+                            <comment />
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </category_weight>
                     </fields>
                 </catalogsearch>
             </groups>

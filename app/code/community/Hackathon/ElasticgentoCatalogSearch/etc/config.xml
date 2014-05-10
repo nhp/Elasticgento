@@ -75,6 +75,7 @@
                 <active>1</active>
                 <suggestions>1</suggestions>
                 <recommendations>1</recommendations>
+                <category_weight>2</category_weight>
             </catalogsearch>
         </elasticgento>
     </default>
