@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Magento
  *
@@ -53,7 +54,12 @@ class Hackathon_ElasticgentoCore_Helper_Config extends Mage_Core_Helper_Abstract
      */
     public function getElasticsearchNodeConnectionData()
     {
-        return unserialize(Mage::getStoreConfig('elasticgento/general/nodes'));
+        $data = unserialize(Mage::getStoreConfig('elasticgento/general/nodes'));
+        $return = array();
+        foreach ($data as $node) {
+            $return[] = array('host' => $node['Host'], 'port' => $node['Port']);
+        }
+        return $return;
     }
 
     /**
