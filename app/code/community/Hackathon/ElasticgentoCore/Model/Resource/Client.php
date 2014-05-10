@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Magento
  *
@@ -62,9 +63,7 @@ class Hackathon_ElasticgentoCore_Model_Resource_Client extends \Elastica\Client
     final public function __construct($options)
     {
         $config = array(
-            'servers' => array(
-                Mage::helper('elasticgento/config')->getElasticsearchNodeConnectionData()
-            ),
+            'servers' => Mage::helper('elasticgento/config')->getElasticsearchNodeConnectionData()
         );
         //call elastica constructor
         parent::__construct($config);

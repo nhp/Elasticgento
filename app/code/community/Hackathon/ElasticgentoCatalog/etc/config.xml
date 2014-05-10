@@ -67,12 +67,12 @@
             </elasticgento_catalog_resource>
         </models>
         <resources>
-            <elasticgento_setup>
+            <elasticgento_catalog_setup>
                 <setup>
-                    <module>Hackathon_ElasticgentoCore</module>
+                    <module>Hackathon_ElasticgentoCatalog</module>
                     <class>Mage_Catalog_Model_Resource_Setup</class>
                 </setup>
-            </elasticgento_setup>
+            </elasticgento_catalog_setup>
         </resources>
         <index>
             <indexer>
