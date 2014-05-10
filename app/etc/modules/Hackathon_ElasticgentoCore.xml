@@ -58,6 +58,7 @@
             <codePool>community</codePool>
             <depends>
                 <Hackathon_ElasticgentoCore/>
+                <Hackathon_ElasticgentoCatalog/>
             </depends>
         </Hackathon_ElasticgentoCatalogSearch>
     </modules>
