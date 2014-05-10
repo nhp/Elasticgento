@@ -14,4 +14,5 @@ modman clone git@github.com:dng-dev/Elasticgento.git
 ## Release Notes
 
 ```
+Requires Hackathon_PSR0Autoloader
 ```
