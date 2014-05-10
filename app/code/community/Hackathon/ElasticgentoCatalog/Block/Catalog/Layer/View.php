@@ -33,7 +33,7 @@
  * Catalog layered navigation view block
  *
  */
-class Hackathon_ElasticgentoCore_Block_Catalog_Layer_View extends Mage_Catalog_Block_Layer_View
+class Hackathon_ElasticgentoCatalog_Block_Catalog_Layer_View extends Mage_Catalog_Block_Layer_View
 {
     /**
      * Boolean block name.
@@ -60,11 +60,11 @@ class Hackathon_ElasticgentoCore_Block_Catalog_Layer_View extends Mage_Catalog_B
     protected function _initBlocks()
     {
         parent::_initBlocks();
-        $this->_categoryBlockName = 'elasticgento/catalog_layer_filter_category';
-        $this->_attributeFilterBlockName = 'elasticgento/catalog_layer_filter_attribute';
-        $this->_priceFilterBlockName = 'elasticgento/catalog_layer_filter_price';
-        $this->_decimalFilterBlockName = 'elasticgento/catalog_layer_filter_decimal';
-        $this->_booleanFilterBlockName = 'elasticgento/catalog_layer_filter_boolean';
+        $this->_categoryBlockName = 'elasticgento_catalog/catalog_layer_filter_category';
+        $this->_attributeFilterBlockName = 'elasticgento_catalog/catalog_layer_filter_attribute';
+        $this->_priceFilterBlockName = 'elasticgento_catalog/catalog_layer_filter_price';
+        $this->_decimalFilterBlockName = 'elasticgento_catalog/catalog_layer_filter_decimal';
+        $this->_booleanFilterBlockName = 'elasticgento_catalog/catalog_layer_filter_boolean';
     }
 
     /**
