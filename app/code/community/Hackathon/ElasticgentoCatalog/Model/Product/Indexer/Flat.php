@@ -33,7 +33,7 @@
  * Elasticgento catalog product flat indexer replacement
  *
  */
-class Hackathon_ElasticgentoCore_Model_Indexer_Catalog_Product extends Mage_Catalog_Model_Product_Indexer_Flat
+class Hackathon_ElasticgentoCore_Model_Product_Indexer_Flat extends Mage_Catalog_Model_Product_Indexer_Flat
 {
 
     /**
