@@ -55,13 +55,15 @@ class Hackathon_ElasticgentoCore_Model_Resource_Client extends \Elastica\Client
     protected $_indexInstances = array();
 
     /**
-     * @todo fetch from config object
+     * Set the Elasticsearch Node Connection Data
+     *
+     * @var array
      */
     final public function __construct($options)
     {
         $config = array(
             'servers' => array(
-                array('host' => '10.1.25.228', 'port' => 9200)
+                Mage::helper('elasticgento/config')->getElasticsearchNodeConnectionData()
             ),
         );
         //call elastica constructor

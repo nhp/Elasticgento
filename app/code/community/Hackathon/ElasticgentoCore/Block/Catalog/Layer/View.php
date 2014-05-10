@@ -65,8 +65,6 @@ class Hackathon_ElasticgentoCore_Block_Catalog_Layer_View extends Mage_Catalog_B
         $this->_priceFilterBlockName = 'elasticgento/catalog_layer_filter_price';
         $this->_decimalFilterBlockName = 'elasticgento/catalog_layer_filter_decimal';
         $this->_booleanFilterBlockName = 'elasticgento/catalog_layer_filter_boolean';
-
-
     }
 
     /**

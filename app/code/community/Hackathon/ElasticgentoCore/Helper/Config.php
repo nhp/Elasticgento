@@ -47,6 +47,16 @@ class Hackathon_ElasticgentoCore_Helper_Config extends Mage_Core_Helper_Abstract
     }
 
     /**
+     * get the ip or ips of the server nodes
+     *
+     * @return array
+     */
+    public function getElasticsearchNodeConnectionData()
+    {
+        return unserialize(Mage::getStoreConfig('elasticgento/general/nodes'));
+    }
+
+    /**
      * get number of shards
      *
      * @return int
