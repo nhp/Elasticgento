@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * elasticgento module declarations
+ *
+ * @category  Dng
+ * @package   Hackathon_ElasticgentoCore
+ * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
+ * @version   1.0.0
+ */
+-->
+<config>
+    <modules>
+        <Hackathon_ElasticgentoCore>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Core/>
+                <Mage_Admin/>
+                <Mage_Adminhtml/>
+                <Mage_Catalog/>
+            </depends>
+        </Hackathon_ElasticgentoCore>
+    </modules>
+</config>

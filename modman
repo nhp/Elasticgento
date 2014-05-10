@@ -1,3 +1,3 @@
-app/etc/modules/Hackathon_Elasticgento.xml                        app/etc/modules/Hackathon_Elasticgento.xml
-lib/Elastica/                                               lib/Elastica
-app/code/community/Dng/Elasticento/                         app/code/community/Dng/Elasticgento/
+app/etc/modules/Hackathon_ElasticgentoCore.xml        app/etc/modules/Hackathon_ElasticgentoCore.xml
+lib/Elastica/                                     lib/Elastica/
+app/code/community/Hackathon/ElasticgentoCore/    app/code/community/Hackathon/ElasticgentoCore/

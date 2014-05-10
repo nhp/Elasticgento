@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+* elasticgento module config file
+*
+* @category  Dng
+* @package   Hackathon_ElasticgentoCore
+* @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
+* @version   1.0.0
+*/
+-->
+<config>
+    <modules>
+        <Hackathon_ElasticgentoCore>
+            <version>1.0.0</version>
+        </Hackathon_ElasticgentoCore>
+    </modules>
+    <global>
+        <helpers>
+            <elasticgento>
+                <class>Hackathon_ElasticgentoCore_Helper</class>
+            </elasticgento>
+        </helpers>
+        <blocks>
+            <elasticgento>
+                <class>Hackathon_ElasticgentoCore_Block</class>
+            </elasticgento>
+            <catalog>
+                <!-- Rewrite Catalog_Layer_View -->
+                <rewrite>
+                    <layer_view>Hackathon_ElasticgentoCore_Block_Catalog_Layer_View</layer_view>
+                </rewrite>
+            </catalog>
+        </blocks>
+        <models>
+            <elasticgento>
+                <class>Hackathon_ElasticgentoCore_Model</class>
+                <resourceModel>elasticgento_resource</resourceModel>
+            </elasticgento>
+            <elasticgento_resource>
+                <class>Hackathon_ElasticgentoCore_Model_Resource</class>
+            </elasticgento_resource>
+        </models>
+        <resources>
+            <elasticgento_setup>
+                <setup>
+                    <module>Hackathon_ElasticgentoCore</module>
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
+                </setup>
+            </elasticgento_setup>
+        </resources>
+        <index>
+            <indexer>
+                <catalogsearch_fulltext>
+                    <model>elasticgento/indexer_catalog_search</model>
+                </catalogsearch_fulltext>
+                <catalog_product_flat>
+                    <model>elasticgento/indexer_catalog_product</model>
+                </catalog_product_flat>
+            </indexer>
+        </index>
+        <cache>
+            <types>
+                <namespace_module module="elasticgento" translate="label description">
+                    <label>Elasticgento</label>
+                    <description>Elasticgento mappings and settings</description>
+                    <tags>ELASTICGENTO</tags>
+                </namespace_module>
+            </types>
+        </cache>
+    </global>
+    <adminhtml>
+        <events>
+            <adminhtml_catalog_product_attribute_edit_prepare_form>
+                <observers>
+                    <elasticgento>
+                        <class>elasticgento/adminhtml_observer</class>
+                        <method>catalog_product_attribute_edit_prepare_form</method>
+                    </elasticgento>
+                </observers>
+            </adminhtml_catalog_product_attribute_edit_prepare_form>
+            <catalog_entity_attribute_save_after>
+                <observers>
+                    <elasticgento>
+                        <class>elasticgento/adminhtml_observer</class>
+                        <method>entity_attribute_save_after</method>
+                    </elasticgento>
+                </observers>
+            </catalog_entity_attribute_save_after>
+        </events>
+    </adminhtml>
+</config>
