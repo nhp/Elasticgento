@@ -1,3 +1,5 @@
-app/etc/modules/Hackathon_ElasticgentoCore.xml      app/etc/modules/Hackathon_ElasticgentoCore.xml
-lib/Elastica/                                       lib/Elastica/
-app/code/community/Hackathon/ElasticgentoCore/      app/code/community/Hackathon/ElasticgentoCore/
+app/etc/modules/Hackathon_ElasticgentoCore.xml               app/etc/modules/Hackathon_ElasticgentoCore.xml
+app/etc/modules/Hackathon_ElasticgentoCatalogSearch.xml      app/etc/modules/Hackathon_ElasticgentoCatalogSearch.xml
+lib/Elastica/                                                lib/Elastica/
+app/code/community/Hackathon/ElasticgentoCore/               app/code/community/Hackathon/ElasticgentoCore/
+app/code/community/Hackathon/ElasticgentoCatalogSearch/      app/code/community/Hackathon/ElasticgentoCatalogSearch/
