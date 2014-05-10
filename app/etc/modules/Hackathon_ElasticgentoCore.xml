@@ -44,6 +44,7 @@
                 <Mage_Admin/>
                 <Mage_Adminhtml/>
                 <Mage_Catalog/>
+                <Hackathon_PSR0Autoloader/>
             </depends>
         </Hackathon_ElasticgentoCore>
         <Hackathon_ElasticgentoCatalog>
