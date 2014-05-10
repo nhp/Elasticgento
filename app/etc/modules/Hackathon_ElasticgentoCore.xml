@@ -32,7 +32,6 @@
  * @link      http://mage-hackathon.de/
  *
  * elasticgento module declarations
- *
  */
 -->
 <config>
@@ -47,5 +46,19 @@
                 <Mage_Catalog/>
             </depends>
         </Hackathon_ElasticgentoCore>
+        <Hackathon_ElasticgentoCatalog>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Hackathon_ElasticgentoCore/>
+            </depends>
+        </Hackathon_ElasticgentoCatalog>
+        <Hackathon_ElasticgentoCatalogSearch>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Hackathon_ElasticgentoCore/>
+            </depends>
+        </Hackathon_ElasticgentoCatalogSearch>
     </modules>
 </config>
