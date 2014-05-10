@@ -54,6 +54,11 @@
             <elasticgento_catalogsearch>
                 <class>Hackathon_ElasticgentoCatalogSearch_Model</class>
             </elasticgento_catalogsearch>
+            <catalogsearch_resource>
+                <rewrite>
+                    <fulltext>Hackathon_ElasticgentoCatalogSearch_Model_Catalogsearch_Resource_Fulltext</fulltext>
+                </rewrite>
+            </catalogsearch_resource>
         </models>
         <index>
             <indexer>
