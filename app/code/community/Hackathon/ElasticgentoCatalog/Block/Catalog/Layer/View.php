@@ -22,10 +22,10 @@
  *
  * @category  Hackathon
  * @package   Hackathon_ElasticgentoCore
- * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
+ * @author    Daniel Niedergesäß <daniel.niedergesaess ÄT gmail.com>
  * @author    Andreas Emer <emer ÄT mothership.de>
- * @author    Michael Ryvlin <ryvlin@gmail.com>
- * @author    Johann Nicklas <johann@n1klas.de>
+ * @author    Michael Ryvlin <ryvlin ÄT gmail.com>
+ * @author    Johann Niklas <johann ÄT n1klas.de>
  * @copyright Copyright (c) 2014 Hackathon
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      http://mage-hackathon.de/
@@ -90,6 +90,7 @@ class Hackathon_ElasticgentoCatalog_Block_Catalog_Layer_View extends Mage_Catalo
                 } elseif ($attribute->getSourceModel() == 'eav/entity_attribute_source_boolean') {
                     #$filterBlockName = $this->_booleanFilterBlockName;
                 } else {
+                    Mage::log($this->_categoryBlockName,null,'bla.log',true);
                     $filterBlockName = $this->_attributeFilterBlockName;
                     $filters[$attribute->getAttributeCode() . '_filter'] = $this->getLayout()->createBlock($filterBlockName)
                         ->setLayer($this->getLayer())
