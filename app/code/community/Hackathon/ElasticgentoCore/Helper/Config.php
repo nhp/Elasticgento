@@ -24,10 +24,10 @@
  * @category  Hackathon
  * @package   Hackathon_ElasticgentoCore
  * @author    Daniel Niedergesäß <daniel.niedergesaess@gmail.com>
- * @author    Andreas Emer <emer@mothership.de>
+ * @author    Andreas Emer <emer ÄT mothership.de>
  * @author    Michael Ryvlin <ryvlin@gmail.com>
  * @author    Johann Nicklas <johann@n1klas.de>
- * @copyright Copyright (c) 2014 Mothership GmbH
+ * @copyright Copyright (c) 2014 Hackathon
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      http://mage-hackathon.de/
  *
