@@ -166,4 +166,18 @@ class Hackathon_ElasticgentoCatalogSearch_Model_Catalogsearch_Resource_Fulltext
 
     }
 
+    /**
+     * overwrite, as original magento code does nothing else in the end result
+     *
+     * @param int  $storeId
+     * @param null $productIds
+     *
+     * @return $this|Mage_CatalogSearch_Model_Resource_Fulltext
+     */
+    protected function _rebuildStoreIndex($storeId, $productIds = null)
+    {
+        $this->resetSearchResults();
+        return $this;
+    }
+
 }
