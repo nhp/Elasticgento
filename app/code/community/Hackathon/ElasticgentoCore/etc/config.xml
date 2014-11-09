@@ -79,26 +79,6 @@
             </types>
         </cache>
     </global>
-    <adminhtml>
-        <events>
-            <adminhtml_catalog_product_attribute_edit_prepare_form>
-                <observers>
-                    <elasticgento>
-                        <class>elasticgento/adminhtml_observer</class>
-                        <method>catalog_product_attribute_edit_prepare_form</method>
-                    </elasticgento>
-                </observers>
-            </adminhtml_catalog_product_attribute_edit_prepare_form>
-            <catalog_entity_attribute_save_after>
-                <observers>
-                    <elasticgento>
-                        <class>elasticgento/adminhtml_observer</class>
-                        <method>entity_attribute_save_after</method>
-                    </elasticgento>
-                </observers>
-            </catalog_entity_attribute_save_after>
-        </events>
-    </adminhtml>
 
     <default>
         <elasticgento>
