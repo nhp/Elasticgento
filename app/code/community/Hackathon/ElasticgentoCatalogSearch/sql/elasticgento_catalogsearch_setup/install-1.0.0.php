@@ -21,7 +21,7 @@
  * PHP Version 5.3
  *
  * @category  Hackathon
- * @package   Hackathon_ElasticgentoCore
+ * @package   Hackathon_ElasticgentoCatalogSearch
  * @author    Daniel Niedergesäß <daniel.niedergesaess ÄT gmail.com>
  * @author    Andreas Emer <emer ÄT mothership.de>
  * @author    Michael Ryvlin <ryvlin ÄT gmail.com>

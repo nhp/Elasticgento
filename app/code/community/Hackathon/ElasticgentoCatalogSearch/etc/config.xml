@@ -60,6 +60,14 @@
                 </rewrite>
             </catalogsearch_resource>
         </models>
+        <resources>
+            <elasticgento_catalog_setup>
+                <setup>
+                    <module>Hackathon_ElasticgentoCatalog</module>
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
+                </setup>
+            </elasticgento_catalog_setup>
+        </resources>
         <index>
             <indexer>
                 <catalogsearch_fulltext>

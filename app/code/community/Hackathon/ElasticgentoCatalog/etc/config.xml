@@ -66,14 +66,6 @@
                 <class>Hackathon_ElasticgentoCatalog_Model_Resource</class>
             </elasticgento_catalog_resource>
         </models>
-        <resources>
-            <elasticgento_catalog_setup>
-                <setup>
-                    <module>Hackathon_ElasticgentoCatalog</module>
-                    <class>Mage_Catalog_Model_Resource_Setup</class>
-                </setup>
-            </elasticgento_catalog_setup>
-        </resources>
         <index>
             <indexer>
                 <catalog_product_flat>
