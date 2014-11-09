@@ -11,6 +11,19 @@ Use [modman](https://github.com/colinmollenhour/modman) to install the module:
 modman clone git@github.com:dng-dev/Elasticgento.git
 ```
 
+
+You maybe need to add the autoloading for Elastica
+
+```xml
+<config>
+    <global>
+        <psr0_namespaces>
+            <Elastica />
+        </psr0_namespaces>
+    </global>
+</config>
+```
+
 ## Release Notes
 
 ```
