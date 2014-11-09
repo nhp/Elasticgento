@@ -61,12 +61,12 @@
             </catalogsearch_resource>
         </models>
         <resources>
-            <elasticgento_catalog_setup>
+            <elasticgento_catalogsearch_setup>
                 <setup>
-                    <module>Hackathon_ElasticgentoCatalog</module>
+                    <module>Hackathon_ElasticgentoCatalogSearch</module>
                     <class>Mage_Catalog_Model_Resource_Setup</class>
                 </setup>
-            </elasticgento_catalog_setup>
+            </elasticgento_catalogsearch_setup>
         </resources>
         <index>
             <indexer>
