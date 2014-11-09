@@ -217,11 +217,17 @@ abstract class Hackathon_ElasticgentoCore_Model_Abstract_Mappings
     }
 
     /**
-     * get list of all attribute codes
-     * @todo maybe add some filters to reduce amount of data
+     * get list of all needed attribute codes
+     * @todo make filters to reduce amount of data easier configurable
      */
     public function getAttributeCodes()
     {
+        $forcedAttributeCodes = array(
+            'name',
+            'sku',
+            'visibility',
+        );
+
         if ($this->_attributeCodes === null) {
             /** @var Mage_Core_Model_Resource $resource */
             $resource = Mage::getSingleton('core/resource');
@@ -238,6 +244,15 @@ abstract class Hackathon_ElasticgentoCore_Model_Abstract_Mappings
             $result = $resource->getConnection('core_read')->fetchAll($select, array('entity_type_id' => $this->getEntityTypeId()));
             Mage::getSingleton('eav/config')->importAttributesData($this->getEntityType(), $result);
             foreach ($result as $data) {
+                if(
+                    $data['is_searchable'] == "0"
+                    && $data['is_filterable'] == "0"
+                    && $data['used_in_product_listing'] == "0"
+                    && $data['is_visible_on_front'] == "0"
+                    && !in_array($data['attribute_code'], $forcedAttributeCodes)
+                ){
+                    continue;
+                }
                 $this->_attributeCodes[$data['attribute_id']] = $data['attribute_code'];
             }
             unset($result);
