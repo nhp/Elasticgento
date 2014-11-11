@@ -51,16 +51,26 @@ class Hackathon_ElasticgentoCatalogSearch_Model_Catalogsearch_Resource_Fulltext
         $query
     ) {
         $helper = Mage::helper('elasticgento_catalogsearch');
+        $flag   = Mage::getModel('core/flag',['flag_code'=>'elasticgento_catalogsearch_inactive_till'])->loadSelf();
+        $now = time();
 
-        if (!$helper->isSearchActive()) {
+        if (!$helper->isSearchActive() || $flag->getFlagData()>$now) {
             return parent::prepareResult($object, $queryText, $query);
         }
 
         if (!$query->getIsProcessed()) {
-            $adapter = $helper->getAdapter();
-            $result = $this->fetchSearchResultFromElasticSearch($adapter, $queryText, $query);
-            if ($result && $result instanceof \Elastica\ResultSet) {
-                $this->fillSearchResultInMagentoResultTable($result, $query);
+            try{
+
+                $adapter = $helper->getAdapter();
+                $result = $this->fetchSearchResultFromElasticSearch($adapter, $queryText, $query);
+                if($result && $result instanceof \Elastica\ResultSet )
+                {
+                    $this->fillSearchResultInMagentoResultTable($result, $query);
+                }
+
+            }catch( \Exception $e ){
+                $flag->setFlagData($now+(60*5))->save();
+                return parent::prepareResult($object, $queryText, $query);
             }
         }
     }
