@@ -103,7 +103,11 @@ class Hackathon_ElasticgentoCatalogSearch_Model_Catalogsearch_Resource_Fulltext
         ];
 
         $elasticQuery->setFields($returnFields);
-        return $searchAdapter->getIndex($query->getStoreId())->search($elasticQuery);
+        $result = $searchAdapter->getIndex($query->getStoreId())->search($elasticQuery, [
+                'limit' => 500,
+            ]);
+
+        return $result;
     }
 
 
