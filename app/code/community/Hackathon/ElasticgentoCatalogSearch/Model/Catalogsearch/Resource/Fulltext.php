@@ -89,13 +89,18 @@ class Hackathon_ElasticgentoCatalogSearch_Model_Catalogsearch_Resource_Fulltext
     )
     {
         $elasticQuery = new Elastica\Query();
-        $queryFuzzyLikeThis = new \Elastica\Query\FuzzyLikeThis();
-        $queryFuzzyLikeThis->addFields(
-            Mage::helper('elasticgento_catalogsearch/data')->getSearchableElasticSearchFieldNames()
-        );
-        $queryFuzzyLikeThis->setLikeText($queryText);
+        $boolQuery = new \Elastica\Query\Bool();
+        $fieldnames = Mage::helper('elasticgento_catalogsearch/data')->getSearchableElasticSearchFieldNames();
+        foreach($fieldnames as $fieldname){
+            $queryFuzzyLikeThis = new \Elastica\Query\FuzzyLikeThis();
+            $queryFuzzyLikeThis->addFields(
+                [$fieldname]
+            );
+            $queryFuzzyLikeThis->setLikeText($queryText);
+            $boolQuery->addShould($queryFuzzyLikeThis);
+        }
 
-        $elasticQuery->setQuery($queryFuzzyLikeThis);
+        $elasticQuery->setQuery($boolQuery);
 
         $returnFields = [
             'entity_id',
