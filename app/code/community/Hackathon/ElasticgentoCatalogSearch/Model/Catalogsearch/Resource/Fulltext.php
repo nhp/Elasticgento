@@ -69,6 +69,7 @@ class Hackathon_ElasticgentoCatalogSearch_Model_Catalogsearch_Resource_Fulltext
                 }
 
             }catch( \Exception $e ){
+                Mage::logException($e);
                 $flag->setFlagData($now+(60*5))->save();
                 return parent::prepareResult($object, $queryText, $query);
             }
