@@ -1,0 +1,8 @@
+{
+  "name": "cotya/elasticgento",
+  "description": "A Magento module to use Elasticsearch as Flat Table Replacement for catalog and search.",
+  "type": "magento-module",
+  "require": {
+        "firegento/psr0autoloader": "*"
+  }
+}
